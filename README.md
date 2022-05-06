@@ -17,3 +17,10 @@
 ![2](/photos/img_3.png)
 
 ![2](/photos/img_4.png)
+
+方案2：维护成本低
+
+![2](/photos/img_5.png)
+
+![2](/photos/img_6.png)
+
