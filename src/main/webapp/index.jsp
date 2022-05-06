@@ -5,6 +5,7 @@
     <title>JSP - Hello World</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/link.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/hotAirBalloon.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
     <style>
         body {
             background-color: #b3c0ff;
