@@ -6,9 +6,12 @@
 * 不用vue-cli创建项目，因为node模块空间占用太大
 * 不提供后端源码
 * 项目html代码一共1103行
-* 项目war包可以运行，但是需要Tomcat
+* 项目war包可以运行，在target目录下，但是需要Tomcat
 
 ## 效果展示：
+
+##首页
+![首页](photos/img_21.png)
 
 ### 1、
 
@@ -68,3 +71,5 @@
 
 ![bootstrap](photos/img_20.png)
 
+## 其它
+![其它](photos/img_22.png)

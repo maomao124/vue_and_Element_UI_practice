@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：vue_and_Element_UI_practice
+  File name(文件名): test1
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/5/6
+  Time(创建时间)： 20:23
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <el-tabs type="card"  v-model="activeName">
+        <el-tab-pane label="标签一" name="1">{{text1}}</el-tab-pane>
+        <el-tab-pane label="标签二" name="2">{{text2}}</el-tab-pane>
+        <el-tab-pane disabled label="标签三" name="3">{{text3}}</el-tab-pane>
+    </el-tabs>
+
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            activeName: '2',
+            text1: "",
+            text2: "",
+            text3: "",
+        },
+        methods: {},
+        mounted()
+        {
+            for (let i = 0; i < 500; i++)
+            {
+                this.text1 += "文字测试1";
+                this.text2 += "文字测试2";
+                this.text3 += "文字测试3";
+            }
+        }
+    })
+</script>
+</body>
+</html>

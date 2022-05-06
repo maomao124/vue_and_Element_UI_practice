@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：vue_and_Element_UI_practice
+  File name(文件名): test2
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/5/6
+  Time(创建时间)： 20:40
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+    <style>
+        a:-webkit-any-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .el-menu-item, .el-submenu__title {
+            font-size: 1.5em;
+        }
+
+        .el-submenu__icon-arrow {
+            font-size: 1.1em;
+        }
+        .el-menu--collapse {
+            width: 130px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <div v-if="screenWidth>=1300">
+        <el-menu
+                default-active="1"
+                mode="horizontal"
+                background-color="#ffd8f7"
+                text-color="#83baff"
+                active-text-color="#ff52b8"
+                @select="handleSelect">
+            <el-menu-item index="1">选项1</el-menu-item>
+            <el-menu-item index="2">选项2</el-menu-item>
+            <el-menu-item index="3">选项3</el-menu-item>
+            <el-submenu index="4">
+                <template slot="title">选项4</template>
+                <el-menu-item index="4-1">选项4-1</el-menu-item>
+                <el-menu-item index="4-2">选项4-2</el-menu-item>
+                <el-menu-item index="4-3">选项4-3</el-menu-item>
+                <el-menu-item index="4-4">选项4-4</el-menu-item>
+                <el-submenu index="4-5">
+                    <template slot="title">选项4-5</template>
+                    <el-menu-item index="4-5-1">选项4-5-1</el-menu-item>
+                    <el-menu-item index="4-5-2">选项4-5-2</el-menu-item>
+                    <el-menu-item index="4-5-3">选项4-5-3</el-menu-item>
+                    <el-menu-item index="4-5-4">选项4-5-4</el-menu-item>
+                    <el-menu-item index="4-5-5">选项4-5-5</el-menu-item>
+                </el-submenu>
+            </el-submenu>
+            <el-menu-item index="5" disabled>选项5</el-menu-item>
+            <el-menu-item index="6"><a href="https://www.bilibili.com/">选项6</a></el-menu-item>
+            <el-submenu index="7">
+                <template slot="title">选项7</template>
+                <el-menu-item index="4-1">选项7-1</el-menu-item>
+                <el-menu-item index="4-2">选项7-2</el-menu-item>
+                <el-menu-item index="4-3">选项7-3</el-menu-item>
+                <el-menu-item index="4-4">选项7-4</el-menu-item>
+            </el-submenu>
+            <el-submenu index="8">
+                <template slot="title">选项8</template>
+                <el-menu-item index="4-1">选项8-1</el-menu-item>
+                <el-menu-item index="4-2">选项8-2</el-menu-item>
+                <el-menu-item index="4-3">选项8-3</el-menu-item>
+                <el-menu-item index="4-4">选项8-4</el-menu-item>
+            </el-submenu>
+            <el-menu-item index="7"><a href="https://github.com/maomao124/">联系我们</a></el-menu-item>
+        </el-menu>
+    </div>
+
+    <div v-if="screenWidth<1300">
+        <div style="max-width: 400px;">
+            <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
+                <el-radio-button :label="false">展开</el-radio-button>
+                <el-radio-button :label="true">收起</el-radio-button>
+            </el-radio-group>
+            <el-menu
+                    default-active="1"
+                    :collapse="isCollapse"
+                    background-color="#ffd8f7"
+                    text-color="#83baff"
+                    active-text-color="#ff52b8"
+                    @select="handleSelect">
+                <el-menu-item index="1">选项1</el-menu-item>
+                <el-menu-item index="2">选项2</el-menu-item>
+                <el-menu-item index="3">选项3</el-menu-item>
+                <el-submenu index="4">
+                    <template slot="title">选项4</template>
+                    <el-menu-item index="4-1">选项4-1</el-menu-item>
+                    <el-menu-item index="4-2">选项4-2</el-menu-item>
+                    <el-menu-item index="4-3">选项4-3</el-menu-item>
+                    <el-menu-item index="4-4">选项4-4</el-menu-item>
+                    <el-submenu index="4-5">
+                        <template slot="title">选项4-5</template>
+                        <el-menu-item index="4-5-1">选项4-5-1</el-menu-item>
+                        <el-menu-item index="4-5-2">选项4-5-2</el-menu-item>
+                        <el-menu-item index="4-5-3">选项4-5-3</el-menu-item>
+                        <el-menu-item index="4-5-4">选项4-5-4</el-menu-item>
+                        <el-menu-item index="4-5-5">选项4-5-5</el-menu-item>
+                    </el-submenu>
+                </el-submenu>
+                <el-menu-item index="5" disabled>选项5</el-menu-item>
+                <el-menu-item index="6"><a href="https://www.bilibili.com/">选项6</a></el-menu-item>
+                <el-submenu index="7">
+                    <template slot="title">选项7</template>
+                    <el-menu-item index="4-1">选项7-1</el-menu-item>
+                    <el-menu-item index="4-2">选项7-2</el-menu-item>
+                    <el-menu-item index="4-3">选项7-3</el-menu-item>
+                    <el-menu-item index="4-4">选项7-4</el-menu-item>
+                </el-submenu>
+                <el-submenu index="8">
+                    <template slot="title">选项8</template>
+                    <el-menu-item index="4-1">选项8-1</el-menu-item>
+                    <el-menu-item index="4-2">选项8-2</el-menu-item>
+                    <el-menu-item index="4-3">选项8-3</el-menu-item>
+                    <el-menu-item index="4-4">选项8-4</el-menu-item>
+                </el-submenu>
+                <el-menu-item index="9"><a href="https://github.com/maomao124/">联系我们</a></el-menu-item>
+
+            </el-menu>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            screenWidth: null,
+            isCollapse: true,
+        },
+        methods: {
+            handleSelect(key, keyPath)
+            {
+                console.log(key, keyPath);
+            }
+        },
+        mounted()
+        {
+            const that = this
+            window.onresize = () =>
+            {
+                return (() =>
+                {
+                    window.screenWidth = document.body.clientWidth
+                    that.screenWidth = window.screenWidth
+                })()
+            }
+            window.screenWidth = document.body.clientWidth
+            that.screenWidth = window.screenWidth
+        }
+    })
+</script>
+</body>
+</html>
