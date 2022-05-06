@@ -2,12 +2,12 @@
 
 <!--
 Project name(项目名称)：vue_and_Element_UI_practice
-  File name(文件名): test1
+  File name(文件名): test2
   Authors(作者）: mao
   Author QQ：1296193245
   GitHub：https://github.com/maomao124/
   Date(创建日期)： 2022/5/6
-  Time(创建时间)： 20:23
+  Time(创建时间)： 20:40
   Description(描述)： 无
 -->
 
@@ -26,11 +26,7 @@ Project name(项目名称)：vue_and_Element_UI_practice
 
 <div id="app">
 
-    <el-tabs type="card"  v-model="activeName">
-        <el-tab-pane label="标签一" name="1">{{text1}}</el-tab-pane>
-        <el-tab-pane label="标签二" name="2">{{text2}}</el-tab-pane>
-        <el-tab-pane disabled label="标签三" name="3">{{text3}}</el-tab-pane>
-    </el-tabs>
+
 
 </div>
 
@@ -38,20 +34,12 @@ Project name(项目名称)：vue_and_Element_UI_practice
     var app = new Vue({
         el: "#app",
         data: {
-            activeName: '2',
-            text1: "",
-            text2: "",
-            text3: "",
+
         },
         methods: {},
         mounted()
         {
-            for (let i = 0; i < 500; i++)
-            {
-                this.text1 += "文字测试1";
-                this.text2 += "文字测试2";
-                this.text3 += "文字测试3";
-            }
+
         }
     })
 </script>
