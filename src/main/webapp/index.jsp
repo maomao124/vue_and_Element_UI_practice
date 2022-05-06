@@ -23,7 +23,7 @@
 
 
 <div class="link_p">
-    <%int n = 3;%>
+    <%int n = 7;%>
     <%
         for (int i = 0; i < n; i++)
         {
@@ -33,6 +33,13 @@
     <%
         }
     %>
+
+    <hr>
+    <a href="bootstrap/test1.html">test1.html</a>
+    <a href="bootstrap/test2.html">test2.html</a>
+    <a href="bootstrap/test3.html">test3.html</a>
+    <a href="bootstrap/test5.html">test5.html</a>
+
 </div>
 
 <div class="left animated slideInUp">
