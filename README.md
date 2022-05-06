@@ -1,8 +1,7 @@
-#前端练习题（作业）
-
-
+# 前端练习题（作业）
 
 ## 效果展示：
+
 ### 1、
 
 ![1](photos/img.png)
@@ -10,6 +9,7 @@
 ![1](photos/img_1.png)
 
 ### 3、
+
 方案1：
 
 ![2](photos/img_2.png)
@@ -36,7 +36,6 @@
 
 ![3](photos/img_11.png)
 
-
 ### 4、
 
 ![4](photos/img_12.png)
@@ -50,4 +49,14 @@
 ![5](photos/img_15.png)
 
 ![5](photos/img_16.png)
+
+## bootstrap:
+
+![bootstrap](photos/img_17.png)
+
+![bootstrap](photos/img_18.png)
+
+![bootstrap](photos/img_19.png)
+
+![bootstrap](photos/img_20.png)
 
